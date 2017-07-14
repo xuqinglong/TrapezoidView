@@ -94,6 +94,9 @@ public class TrapezoidImageView extends ImageView {
 
     }
 
+    /**
+     * 当type为middle和bottom时设置margin
+     */
     private void setMargin() {
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(getMeasuredWidth(),getMeasuredHeight());
         params.setMargins(0,-incline/5*4,0,0);
