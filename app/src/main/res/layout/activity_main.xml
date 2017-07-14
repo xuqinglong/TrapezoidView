@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
     tools:context="com.allen.trapezoidview.MainActivity">
 
-    <com.allen.lib.views.TrapezoidView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@drawable/bg"
-        android:src="@mipmap/ic_launcher"
+    <com.allen.lib.views.TrapezoidImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@mipmap/top"
+        app:position="top"
+        app:incline="25dp"
+        android:scaleType="centerCrop"/>
+    <com.allen.lib.views.TrapezoidImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@mipmap/middle"
+        app:incline="25dp"
         app:position="middle"
-        android:padding="3dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+        android:scaleType="centerCrop"/>
+    <com.allen.lib.views.TrapezoidImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@mipmap/bottom"
+        app:incline="25dp"
+        app:position="bottom"
+        android:scaleType="centerCrop"/>
+</LinearLayout>
