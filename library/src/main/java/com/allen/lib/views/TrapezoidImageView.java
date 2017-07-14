@@ -99,7 +99,7 @@ public class TrapezoidImageView extends ImageView {
      */
     private void setMargin() {
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(getMeasuredWidth(),getMeasuredHeight());
-        params.setMargins(0,-incline/5*4,0,0);
+        params.setMargins(0,-incline/6*5,0,0);
         setLayoutParams(params);
         requestLayout();
     }
@@ -197,6 +197,11 @@ public class TrapezoidImageView extends ImageView {
         return mBitmap;
     }
 
-
-
+    /**
+     * 代码设置drawable
+     * @param drawable
+     */
+   public void setDrawable(Drawable drawable){
+       this.mDrawable = drawable;
+   }
 }
